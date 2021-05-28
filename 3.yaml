@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+   
+  tasks:
+    - name: List all files and directories in /tmp
+      shell: ls /tmp
+      register: dir_contents
+    - name: Print directory contents using loops
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ dir_contents.stdout_lines }}"
