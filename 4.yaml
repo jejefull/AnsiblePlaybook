@@ -1,0 +1,11 @@
+---
+- hosts: mygroup
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+   
+  tasks:
+    - name: just display
+      shell: ip a
+      register: ip1
+    - debug:
+        var: ip1
