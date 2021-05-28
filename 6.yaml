@@ -1,0 +1,14 @@
+---
+- hosts: mygroup
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  tasks:
+  - name: "uninstall nano"
+    become: yes
+    apt:
+      name: nano
+      state: absant
+      
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
