@@ -8,7 +8,7 @@
     become: yes
     apt:
       name: nano
-      state: absant
+      state: absent
       
   vars:
     ansible_python_interpreter: /usr/bin/python3
